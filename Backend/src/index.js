@@ -33,15 +33,16 @@ app.use('/chat', chatRouter);  //For Ai
 
 //Server Initialization
 
+const PORT = process.env.PORT || 3000;
+
 const InitializeConnection = async ()=>{
     try{
         await Promise.all([main(),redisClient.connect()]);
         console.log("DB and Redis Connected!")
 
-        app.listen(process.env.PORT, () => {
-        console.log("Server running on port:", process.env.PORT);
-
-    });
+        app.listen(PORT, () => {
+    console.log("Server running on port:", PORT);
+});
     }
     catch(err){
 
