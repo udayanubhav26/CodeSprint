@@ -36,7 +36,7 @@ function Homepage() {
 
     const fetchSolvedProblems = async () => {
       try {
-        const { data } = await axiosClient.get('/problem/problemSolvedByUser');
+        const { data } = await axiosClient.get('/problem/problemAllSolvedByUser');
         setSolvedProblems(data);
       } catch (error) {
         console.error('Error fetching solved problems:', error);
