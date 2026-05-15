@@ -14,7 +14,10 @@ const chatRouter = require('./routes/chat.js');
 //Middleware
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://code-sprint-gray.vercel.app"
+    ],
     credentials: true
 }));
 
