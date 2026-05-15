@@ -1,0 +1,44 @@
+{
+  "title": "Two Sum",
+  "description": "Find two numbers in the array that add up to target.",
+  "difficulty": "easy",
+  "tags": "array",
+
+  "visibleTestCases": [
+    {
+      "input": "2 7 11 15\n9",
+      "output": "0 1",
+      "explanation": "nums[0] + nums[1] = 9"
+    },
+    {
+      "input": "3 2 4\n6",
+      "output": "1 2",
+      "explanation": "nums[1] + nums[2] = 6"
+    }
+  ],
+
+  "hiddenTestCases": [
+    {
+      "input": "1 3 3\n6",
+      "output": "1 2"
+    },
+    {
+      "input": "5 5\n10",
+      "output": "0 1"
+    }
+  ],
+
+  "startCode": [
+    {
+      "language": "javascript",
+      "initialCode": "function twoSum(nums, target) {\n  // write code here\n}"
+    }
+  ],
+
+  "ReferenceSolution": [
+    {
+      "language": "javascript",
+      "completeCode": "const fs = require(\"fs\");\nconst input = fs.readFileSync('/dev/stdin', 'utf-8').trim().split('\\n');\nconst nums = input[0].split(\" \").map(Number);\nconst target = Number(input[1]);\nfunction twoSum(nums, target) {\n  let map = {};\n  for (let i = 0; i < nums.length; i++) {\n    let diff = target - nums[i];\n    if (map[diff] !== undefined) return [map[diff], i];\n    map[nums[i]] = i;\n  }\n}\nconst result = twoSum(nums, target);\nconsole.log(result.join(\" \"));"
+    }
+  ]
+}

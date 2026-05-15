@@ -1,0 +1,58 @@
+🔵 1xx — Informational (Request received, still processing)
+
+These are rare in everyday development.
+
+100 Continue → Client can continue sending request
+101 Switching Protocols → Protocol change (like HTTP → WebSocket)
+
+🟢 2xx — Success (Everything worked ✅)
+200 OK → Standard success response
+201 Created → New resource created (common in POST APIs)
+202 Accepted → Request accepted but not processed yet
+204 No Content → Success but no data returned
+
+🟡 3xx — Redirection (Go somewhere else 🔁)
+301 Moved Permanently → Resource moved forever
+302 Found → Temporary redirect
+304 Not Modified → Cached version is still valid
+
+🔴 4xx — Client Errors (Your mistake ❌)
+400 Bad Request → Invalid request data
+401 Unauthorized → Not logged in / invalid token
+403 Forbidden → No permission
+404 Not Found → Resource doesn't exist
+405 Method Not Allowed → Wrong HTTP method (GET/POST mismatch)
+408 Request Timeout → Took too long
+409 Conflict → Data conflict (e.g., duplicate entry)
+413 Payload Too Large → File too big
+415 Unsupported Media Type → Wrong content-type
+429 Too Many Requests → Rate limit exceeded
+
+⚫ 5xx — Server Errors (Server messed up 💥)
+500 Internal Server Error → Generic server crash
+501 Not Implemented → Feature not supported
+502 Bad Gateway → Invalid response from another server
+503 Service Unavailable → Server down or overloaded
+504 Gateway Timeout → Upstream server didn't respond
+
+
+
+❌ WRONG / ERROR OUTPUT
+ID	Meaning
+4	❌ Wrong Answer
+5	❌ Time Limit Exceeded
+6	❌ Compilation Error
+7	❌ Runtime Error (SIGSEGV etc.)
+8	❌ Runtime Error (SIGXFSZ)
+9	❌ Runtime Error (SIGFPE - divide by zero)
+10	❌ Runtime Error (SIGABRT)
+11	❌ Runtime Error (NZEC - non-zero exit)
+12	❌ Runtime Error (Other)
+
+
+⏳ PROCESSING STATES
+ID	Meaning
+1	⏳ In Queue
+2	⏳ Processing
+3   😁 Accepted              
+

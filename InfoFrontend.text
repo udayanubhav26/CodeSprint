@@ -1,0 +1,61 @@
+npm create vite@latest
+
+npm install
+
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+
+add this in vite.config.js
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite';  <--this 
+
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],  <--this
+})
+
+
+index.css add this 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+make a file called
+
+tailwind.config.js
+
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("daisyui")], // ✅ THIS is how DaisyUI is added
+}
+
+npm install react-router
+
+import { Routes, Route } from "react-router";
+
+npm i react-hook-form
+
+npm i zod
+
+npm i @hookform/resolvers
+
+npm install react-router-dom
+
+npm i react-redux
+
+npm i @reduxjs/toolkit
+
+npm install @monaco-editor/react
+
+npm i lucide-react
+
+npm install react-markdown

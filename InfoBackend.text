@@ -1,0 +1,45 @@
+npm init -y
+
+npm i express
+
+npm i dotenv
+
+npm i path
+
+npm i mongoose
+
+npm i cookie-parser
+
+npm i validator
+
+npm i bcrypt --> hash password 
+
+npm i jsonwebtoken
+
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))" --> key generation
+
+npm i redis
+
+//force env connect 
+// force correct path
+require('dotenv').config({
+    path: path.join(__dirname, '.env')           <-- use it when needed!
+});
+
+npm i axios
+
+npm install cors
+{
+    //inside index.js in backend
+    
+    const cors = require('cors');
+
+//Middleware
+
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
+}
+
+npm i @genai
