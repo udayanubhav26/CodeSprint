@@ -15,10 +15,10 @@ problemRouter.post('/create', adminMiddleware, createProblem);
 problemRouter.put('/update/:id', adminMiddleware, updateProblem);
 problemRouter.delete('/delete/:id', adminMiddleware, deleteProblem);
 
-problemRouter.get('/problemById/:id', getProblemById);
-problemRouter.get('/getAllProblem', getAllProblem);
-problemRouter.get('/problemAllSolvedByUser', problemAllSolvedByUser);
-problemRouter.get('/submittedProblem/:pid', submittedProblem);
+problemRouter.get('/problemById/:id', userMiddleware, getProblemById);
+problemRouter.get('/getAllProblem', userMiddleware, getAllProblem);
+problemRouter.get('/problemAllSolvedByUser', userMiddleware, problemAllSolvedByUser);
+problemRouter.get('/submittedProblem/:pid', userMiddleware, submittedProblem);
 
 
 
