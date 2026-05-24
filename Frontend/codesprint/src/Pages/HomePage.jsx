@@ -23,16 +23,22 @@ function Homepage() {
 
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProblems = async () => {
-      try {
-        const { data } = await axiosClient.get('/problem/getAllProblem');
-        setProblems(data);
-      } catch (error) {
-        console.error('Error fetching problems:', error);
-      }
-    };
+    try {
+      setLoading(true);
+      const { data } = await axiosClient.get('/problem/getAllProblem');
+      setProblems(data);
+    } catch (err) {
+      setError('Failed to fetch problems');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+    
 
     const fetchSolvedProblems = async () => {
       try {
