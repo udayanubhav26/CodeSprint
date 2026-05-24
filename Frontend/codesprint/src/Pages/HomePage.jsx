@@ -30,6 +30,8 @@ function Homepage() {
     const fetchProblems = async () => {
     try {
       setLoading(true);
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
       const { data } = await axiosClient.get('/problem/getAllProblem');
       setProblems(data);
     } catch (err) {
@@ -70,7 +72,7 @@ function Homepage() {
       </div>
     );
   }
-  
+
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col">
