@@ -24,6 +24,7 @@ function Homepage() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchProblems = async () => {
@@ -61,6 +62,14 @@ function Homepage() {
 
     return difficultyMatch && tagMatch && statusMatch;
   });
+
+ if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-[#0d1117]">
+        <span className="loading loading-spinner loading-lg text-purple-500"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col">
