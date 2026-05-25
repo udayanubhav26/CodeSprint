@@ -116,7 +116,7 @@ function About() {
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
                   <p className="text-white font-medium break-all">
-                    codesprintsupport07@gmail.com
+                    <a>codesprintsupport@gmail.com</a>
                   </p>
                 </div>
               </div>
