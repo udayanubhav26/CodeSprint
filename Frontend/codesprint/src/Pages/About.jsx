@@ -116,7 +116,7 @@ function About() {
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
                   <p className="text-white font-medium break-all">
-                    <a href='mailto:codesprintsupport@gmail.com'>codesprintsupport@gmail.com</a>
+                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=codesprintsupport@gmail.com'>codesprintsupport@gmail.com</a>
                   </p>
                 </div>
               </div>
